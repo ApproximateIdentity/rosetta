@@ -598,7 +598,7 @@ class LDAResults(object):
             outstr += (
                 '\n' + "-" * 30 + '\nTopic name: %s.  P[%s] = %.4f' %
                 (topic_name, topic_name, self.pr_topic[topic_name]))
-            sorted_topic = self.pr_token_g_topic[topic_name].order(
+            sorted_topic = self.pr_token_g_topic[topic_name].sort_values(
                 ascending=False).head(num_words)
 
             if show_doc_fraction:
