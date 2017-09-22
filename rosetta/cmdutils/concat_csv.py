@@ -64,7 +64,7 @@ def _cli():
 
 def _concat(outfile, paths, sep, index, header, axis):
     # Read
-    index_col = 0 if index else False
+    index_col = 0 if index else None
     header_row = 0 if header else None
     kwargs = {'sep': sep, 'index_col': index_col, 'header': header_row}
     frames = pd.concat(
